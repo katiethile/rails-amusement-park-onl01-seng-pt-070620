@@ -1,0 +1,8 @@
+<h1>Sign in!</h1>
+
+<%= form_tag('/session', method: :post) do %>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<%= collection_select(:user, :name, User.all, :name, :name, prompt: "Please select your username from this dropdown") %>
+<%= password_field_tag(:password, nil) %>
+<%= submit_tag "Sign In"%>
+<%end%>

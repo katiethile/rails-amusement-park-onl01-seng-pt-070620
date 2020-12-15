@@ -1,0 +1,8 @@
+<h1>Welcome <%= @user.name %></h1>
+<p>Mood: <%= @user.mood %></p>
+<p>Nauseous Rating: <%= @user.nausea %></p>
+<p>Height: <%= @user.height %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<%if @user.admin%>
+<p>ADMIN</p>
+<%end%>
